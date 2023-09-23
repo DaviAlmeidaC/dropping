@@ -1,0 +1,67 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: #00A3FF;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.Butao_menu{
+    background-color: #00A3FF;
+    border: none;
+}
+
+.perfil{
+    margin-left: 4vw;
+    margin-right: -10vw;
+}
+
+.pesquisa{
+    padding: 1vh 7vw;
+    border-radius: 7px;
+}
+
+.coração{
+    margin-right: -5vw;
+    margin-left: 5vw;
+}
+
+.carrinho{
+    margin-left: -6vw;
+    
+}
+
+.Butao_menu:hover{
+    cursor: pointer;
+}
+
+
+.links_header{
+    background-color: #76B4D8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.4vw 0;
+}
+
+.liks_baixo{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.carrosel__titulo2{
+    font-size: 35px;
+    margin-left: 4vw;
+}
+
+.img-carrosel1{
+    width: 13vw;
+}
+
+.swiper-wrapper{
+    margin-right: 2vw;
+}

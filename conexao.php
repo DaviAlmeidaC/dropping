@@ -3,7 +3,7 @@
     $host = "localhost";
     $dbname = "dropping";
     $username = "root";
-    $password = "2006";
+    $password = "";
 
 
     //Criar a conexão

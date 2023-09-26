@@ -1,6 +1,6 @@
 <?php
 // Conectar ao banco de dados
-$conexao = mysqli_connect("localhost", "root", "2006", "dropping");
+$conexao = mysqli_connect("localhost", "root", "", "dropping");
 
 // Verificar a conexão
 if (mysqli_connect_errno()) {
@@ -8,8 +8,8 @@ if (mysqli_connect_errno()) {
 }
 
 // Dados padrão que você deseja inserir
-$nomePadrao = "carr";
-$idadePadrao = 100;
+$nomePadrao = "carro";
+$idadePadrao = 1000;
 
 // Realizar a inserção no banco de dados
 $query = "INSERT INTO produtos (nome, preco) VALUES ('$nomePadrao', $idadePadrao)";

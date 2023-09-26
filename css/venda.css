@@ -192,3 +192,51 @@
 .trash:hover{
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 768px){
+    .links_header{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1em;
+    }
+    
+    .perfil{
+        width: 6vw;
+        margin-left: -0.3em;
+    }
+    
+    .coração{
+        display: none;
+    }
+    
+    .pesquisa{
+        padding: 0.7vh 3vw;
+    }
+    
+    .carrinho{
+        width: 5vw;
+        margin-left: 0.3em;
+    }
+    
+    .liks_baixo1{
+        font-size: 10px;
+    }
+    
+    .liks_baixo{
+        font-size: 10px;
+    }
+
+    .trash{
+        display: flex;
+       
+        margin: 0;
+    }
+
+    .blocos{
+        display: flex;
+      
+        align-items: center;
+        justify-content: center;
+    }
+
+}

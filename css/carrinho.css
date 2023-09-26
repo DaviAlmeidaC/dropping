@@ -66,7 +66,9 @@
 }
 
 
-
+.blocos{
+    display: flex;
+}
 .nome_cadeira{
     font-size: 45px;
     font-weight: bold;
@@ -97,6 +99,11 @@
     border-radius: 5px;
     min-width: 30vw;
     max-width: 100%;
+}
+
+.imagens{
+    display: flex;
+    
 }
 
 .informacoes{
@@ -358,3 +365,78 @@ align-items: center;
 }
 
 
+@media screen and (max-width: 768px){
+    .links_header{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1em;
+    }
+    
+    .perfil{
+        width: 6vw;
+        margin-left: -0.3em;
+    }
+    
+    .coração{
+        display: none;
+    }
+    
+    .pesquisa{
+        padding: 0.7vh 3vw;
+    }
+    
+    .carrinho{
+        width: 5vw;
+        margin-left: 0.3em;
+    }
+    
+    .liks_baixo1{
+        font-size: 10px;
+    }
+    
+    .liks_baixo{
+        font-size: 10px;
+    }
+
+    .div_principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagens{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fotos{
+        margin-top: 4em;
+        width: 80vw;
+    }
+
+    .informacoes{
+        width: 90vw;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+
+    .nome_info{
+       margin-left: 1em;
+    }
+
+    .botao_compra{
+        display: flex;
+        align-items: center;
+    }
+
+    .carrossel{
+        display: none;
+    }
+
+    .tamanho_icons{
+        display: none;
+    }
+
+    .nome_cadeira{
+        margin-bottom: -0.5em;
+    }
+}

@@ -39,6 +39,7 @@
     <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
 
     <div class="div_principal">
+        <div class="imagens">
         <div class="fotos_pequenas">
             <a href=""><img class="fotos_cadeiras" src="img2/image 13.png" alt=""></a>
             <a href=""><img class="fotos_cadeiras" src="img2/image 14.png" alt=""></a>
@@ -50,7 +51,7 @@
         <img class="fotos" src="img2/image 131.png" alt="">
         
         </div>
-
+        </div>
 
         <div class="informacoes">
             <div class="tempo">

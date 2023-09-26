@@ -177,3 +177,73 @@
     transform:  scale(1.1);
 }
 
+@media screen and (max-width: 768px){
+.links_header{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1em;
+}
+
+.img_bolinha{
+    width: 10vw;
+}
+
+.inf_bolinha{
+    font-size: 10px;
+    margin-right: 1em;
+}
+
+.perfil{
+    width: 6vw;
+    margin-left: -0.3em;
+}
+
+.coração{
+    display: none;
+}
+
+.pesquisa{
+    padding: 0.7vh 3vw;
+}
+
+.carrinho{
+    width: 5vw;
+    margin-left: 0.3em;
+}
+
+.liks_baixo1{
+    font-size: 10px;
+}
+
+.liks_baixo{
+    font-size: 10px;
+}
+
+.titulo_anuncio{
+    font-size: 10px;
+    margin-right: 6em;
+    margin-left: -2em;
+}
+
+.avaliações{
+    margin-left: -2em;
+}
+
+.valor_antigo{
+    margin-left: -1em;
+    font-size: 10px;
+}
+
+.valor{
+    font-size: 9px;
+    margin-left: -2em;
+    
+}
+
+.valor_pix{
+    font-size: 9px;
+    margin-right: 1em;
+}
+
+}
+

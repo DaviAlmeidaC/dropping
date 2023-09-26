@@ -1,10 +1,12 @@
+
 .header{
     display: flex;
     flex-direction: row;
-    background-color: #00A3FF;
+    background-color: #00a2ff;
     align-items: center;
     justify-content: space-around;
     padding: 1em 0;
+   
 }
 
 .Butao_menu{
@@ -18,8 +20,9 @@
 }
 
 .pesquisa{
-    padding: 1vh 7vw;
+    padding: 0.7vh 7vw;
     border-radius: 7px;
+    border: 1px black solid;
 }
 
 .coração{
@@ -35,3 +38,323 @@
 .Butao_menu:hover{
     cursor: pointer;
 }
+
+.links_header{
+    background-color: #76B4D8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.4vw 0;
+    box-shadow: rgb(184, 184, 184) 0px 15px 20px 0px;
+    
+}
+
+.liks_baixo{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: -25em;
+}
+
+.liks_baixo1{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+   
+}
+
+
+
+.nome_cadeira{
+    font-size: 45px;
+    font-weight: bold;
+    margin: 4vh 6vw;
+}
+
+.div_principal{
+    display: flex;
+    justify-content: center;
+}
+
+.fotos_pequenas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-right: 1.5vw;
+    max-width: 100%;
+}
+
+.fotos_cadeiras{
+    margin-top: 1vh;
+    border: rgb(172, 172, 172) 0.5px solid;
+    max-width: 100%;
+}
+
+.fotos{
+    border: rgb(172, 172, 172) 1px solid;
+    border-radius: 5px;
+    min-width: 30vw;
+    max-width: 100%;
+}
+
+.informacoes{
+    
+    border: rgb(172, 172, 172) 1px solid;
+    border-radius: 3px;
+    width: 23vw; /* 50% da largura do contêiner pai */
+    
+}
+
+.tempo{
+    border: rgb(172, 172, 172) 1px solid;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh 0;
+    width: 100%;
+}
+
+.img_relogio{
+font-weight: bold;
+display: flex;
+align-items: center;
+
+}
+
+.principal_avaliacoes{
+    background-color: #B4B4B4;
+    border: rgb(172, 172, 172) 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh 0;
+    font-size: 16px;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2em;
+    margin-bottom: 0.5em;
+    
+}
+
+.img_carrinho_bu{
+    margin-right: 1.3em;
+    
+}
+
+.tamanho_icons{
+    width: 1.4vw;
+    max-width: 100%;
+    transition: transform 0.2s;
+}
+
+.vendas{
+    color: #DBFF00;
+}
+
+.novo{
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5vh 0;
+    font-size: 12px;
+}
+
+.nome_info{
+    font-size: 1.3em;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    margin: 2vh 1vw;
+}
+
+.dinheiro{
+ display: flex;
+ align-items: center;
+ margin-top: 5em;
+ margin-bottom: 4em;
+ margin-left: 1em;
+ transition: transform 0.3s;
+}
+
+.img_dinheiro{
+    height: 3vh;
+    transition: transform 0.3s;
+}
+
+.preco_novo{
+    font-weight: bold;
+    font-size: 30px;
+    color: #5D9F1B;
+}
+
+.cartao{
+ display: flex;
+ align-items: center;
+ margin-bottom: 4em;
+ margin-left: 1em;
+ transition: transform 0.3s;
+}
+
+.img_cartao{
+    height: 2.5vh;
+    margin-right: 0.5em;
+    transition: transform 0.3s;
+}
+
+.preco_novo1{
+    font-size: 12px;
+    
+}
+
+.preco_novob{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cortar{
+    text-decoration: line-through;
+}
+
+.botao_compra{
+    display: flex;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 1.5vh 5vw;
+    margin: 0 1vw;
+    background-color: #90E522;
+    align-content: flex-end;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.h1_descricao{
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0 1vh 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p_descricao{
+    display: flex;
+    justify-content: center;
+    word-wrap: break-word;
+    margin: 0 27vw;
+  color: gray;
+  margin-bottom: 4em;
+}
+
+.carrosel__titulo2{
+    font-size: 30px;
+    margin-left: 3vw;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+.img-carrosel1{
+    width: 13vw;
+}
+
+.swiper-wrapper{
+    margin-right: 2vw;
+    margin-left: 2.2vw;
+    border-bottom: solid gray 0.5px;
+}
+
+.infos{
+    margin-bottom: 4em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+
+
+
+.titulo_anuncio{
+    font-weight: bold;
+}
+
+.img-carrosel12{
+    width: 60vw;
+    margin-right: 5em;
+}
+
+.avaliações{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0.3em 0;
+}
+
+.img_estrela{
+    width: 4vw;
+}
+
+.valor_antigo{
+    color: gray;
+    font-size: 14px;
+    margin: 0.3em 0;
+    text-decoration: line-through;
+    margin-bottom: 0.6em;
+}
+
+.valor_pix{
+    font-size: 10px;
+}
+
+.valor{
+    font-size: 24px;
+}
+
+
+.liks_baixo:hover{
+    transform:  scale(1.1);
+}
+
+.liks_baixo1:hover{
+    transform:  scale(1.1);
+}
+
+.coração:hover,
+.coração:focus{
+    transform:  scale(1.1);
+}
+
+.carrinho:hover{
+    transform:  scale(1.1);
+}
+
+.fotos_cadeiras:hover{
+    transform:  scale(1.1);
+}
+
+.botao_compra:hover{
+    transform:  scale(1.06);
+}
+
+.tamanho_icons:hover{
+    transform:  scale(1.1);
+}
+
+.dinheiro:hover{
+    border-radius: 1px black solid;
+}
+
+

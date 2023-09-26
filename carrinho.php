@@ -1,14 +1,25 @@
+<?php
+    include "conexao.php";
+
+    $sql = "SELECT * FROM produtos";
+    $result = mysqli_query($conn, $sql);
+
+    if(!$result){
+        die("Erro na consulta: ".mysqli_error($conn));
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/venda.css">
     <link rel="stylesheet" href="css/reset.css">
-    <title>Carrinho</title>
+    <title>Document</title>
 </head>
 
-    <Header class="header">
+<Header class="header">
         <button class="Butao_menu"><img class="img_menu" src="img/menu.png" alt=""></button>   
         <h1 class="logo">Logo</h1>
         <input class="pesquisa" type="text" placeholder="Pesquise o seu produto" >
@@ -18,77 +29,55 @@
     </Header>
 
 <body>
+     <style>
+    body {
+      font-family: 'SuaFonte', sans-serif;
+    }
+  </style>
     <div class="links_header">
-        <a class="liks_baixo" href="">Ofertas do dia</a>
+        <a class="liks_baixo" href="index.php">Ofertas do dia</a>
         <a class="liks_baixo" href="">Entrar em contato</a>
         <a class="liks_baixo" href="">Comprar novamente</a>
-        <a class="liks_baixo" href="">Redes sociais</a>
+        <a class="liks_baixo1" href="">Redes sociais</a>
     </div>
 
-    <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
+    <h1 class="title">Carrinho</h1>
 
-    <div class="div_principal">
-        <div class="fotos_pequenas">
-            <img src="img2/image 13.png" alt="">
-            <img src="img2/image 14.png" alt="">
-            <img src="img2/image 16.png" alt="">
-            <img src="img2/image 17.png" alt="">
-        </div>    
-
-        <div class="fotos">
-        <img src="img2/image 131.png" alt="">
-        <img src="img2/Vector-1.png" alt="">
-        <img src="img2/Vector.png" alt="">
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <div class="blocos" >
+        <div class="img_div">
+            <img class="img" src="img2/image 13 (1).png" alt="">
         </div>
 
-
-        <div class="informacoes">
-            <div class="tempo">
-                <h2>Promoção de verão</h2>
-                <h2><img src="img2/clock (1).png" alt="">5 HORAS 15:30</h2>
+        <div class="infos" <?php $row = mysqli_fetch_assoc($result) ?>>
+            <div class="trash">
+            <a href="deletar.php?id=<?php echo $row["id"]?>"><img  src="img2/trash-2.png" alt=""></a>
             </div>
-
-            <div class="principal_avaliacoes">
-                <div class="avaliacoes">
-                    <p class="estrelas"><img src="img2/image 10.png" alt="">(1.234)</p>
-                    <p class="vender">Vendas: <b class="vendas">1345</b></p>
-                </div>
-                <div class="estoque">
-                    <p class="">Estoque:</p>
+        <h1 class="nome_info"><?php echo $row['nome'];?></h1>
+        <div class="dinheiro">
+                
+                <div>
+                <p><b class="preco_novo"> <?php echo $row['preco']; ?> </b> no pix</p>
                 </div>
             </div>
 
-            <div class="novo">
-                <p class="estadp">Estado:novo</p>
-                <p class="loja">GB Games</p>
+            <div class="calcular">
+                <div>
+                <a class="calcular-frete" href="">Calcular Frete</a>
+                </div>
+            <div class="acrescimo">
+                <button class="acrescimo-sinal"><p >-</p></button>
+                <section class=quantidade></section>
+                <button class="acrescimo-sinal"><p >+</p></button>
+            </div>
             </div>
 
-            <h1 class="nome_info">Cadeira Gamer Skie 4D, 3 Almofadas, Reclinavel, Branco e Preta</h1>
-
-            <div class="dinheiro">
-                <img src="img2/dollar-sign.png" alt="">
-                <p class="preco_antigo"><b class="cortar">De: R$ 478,99</b> por:</p>
-                <h1 class="preco_novo"><b class="preco_novob">R$ 236,99</b> no pix</h1>
+            <div class="button">
+            <a class="botao_compra" href="">Finalizar pedido</a>
             </div>
-
-            <div class="cartao">
-                <img src="img2/credit-card.png" alt="">
-                <p class="preco_antigo"><b class="cortar">De: R$ 478,99</b> por:</p>
-                <h1 class="preco_novo"><b class="preco_novob">R$ 236,99</b> Parcelado de 10x</h1>
-            </div>
-            
-            <a href="">Comprar com desconto</a>
-
         </div>
-
-
     </div>
-
-    <div>
-        <h1>Descrição</h1>  
-        <p>cadeira gamer é construída com um design ergonomicamente pensado. Ela é projetada para fornecer suporte adequado para a coluna vertebral e a postura, reduzindo a fadiga durante horas de jogo. Possui curvas e contornos que se encaixam no corpo do jogador.</p>
-    </div>
-
+    <?php endwhile; ?>
 
 </body>
 </html>

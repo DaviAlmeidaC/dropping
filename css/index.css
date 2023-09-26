@@ -2,10 +2,11 @@
 .header{
     display: flex;
     flex-direction: row;
-    background-color: #00A3FF;
+    background-color: #00a2ff;
     align-items: center;
     justify-content: space-around;
     padding: 1em 0;
+   
 }
 
 .Butao_menu{
@@ -19,24 +20,25 @@
 }
 
 .pesquisa{
-    padding: 1vh 7vw;
+    padding: 0.7vh 7vw;
     border-radius: 7px;
+    border: 1px black solid;
 }
 
 .coração{
     margin-right: -5vw;
     margin-left: 5vw;
+    transition: transform 0.3s;
 }
 
 .carrinho{
     margin-left: -6vw;
-    
+    transition: transform 0.3s;
 }
 
 .Butao_menu:hover{
     cursor: pointer;
 }
-
 
 .links_header{
     background-color: #76B4D8;
@@ -44,18 +46,58 @@
     justify-content: space-around;
     align-items: center;
     padding: 0.4vw 0;
+    box-shadow: rgb(184, 184, 184) 0px 15px 20px 0px;
+    
 }
 
 .liks_baixo{
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 20px;
+    margin-right: -25em;
+    transition: transform 0.3s;
+}
+
+.liks_baixo1{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    transition: transform 0.3s;
+   
+}
+
+
+.categorias{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3em;
+    margin-bottom: 2.4em;
+}
+.bolinha_cad{
+    transition: transform 0.3s;
+}
+
+.img_bolinha{
+    min-width: 4vw;
+}
+
+.inf_bolinha{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 20;
+    text-decoration: none;
+    color: black;
 }
 
 .carrosel__titulo2{
-    font-size: 35px;
-    margin-left: 4vw;
+    font-size: 30px;
+    margin-left: 3vw;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    margin-top: 1em;
 }
 
 .img-carrosel1{
@@ -64,4 +106,74 @@
 
 .swiper-wrapper{
     margin-right: 2vw;
+    margin-left: 2.2vw;
+    border-bottom: solid gray 0.5px;
 }
+
+.infos{
+    margin-bottom: 4em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+
+
+
+.titulo_anuncio{
+    font-weight: bold;
+}
+
+.img-carrosel12{
+    width: 60vw;
+    margin-right: 5em;
+}
+
+.avaliações{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0.3em 0;
+}
+
+.img_estrela{
+    width: 4vw;
+}
+
+.valor_antigo{
+    color: gray;
+    font-size: 14px;
+    margin: 0.3em 0;
+    text-decoration: line-through;
+    margin-bottom: 0.6em;
+}
+
+.valor_pix{
+    font-size: 10px;
+}
+
+.valor{
+    font-size: 24px;
+}
+
+
+.bolinha_cad:hover{
+    transform:  scale(1.1);
+}
+
+.liks_baixo:hover{
+    transform:  scale(1.1);
+}
+
+.liks_baixo1:hover{
+    transform:  scale(1.1);
+}
+
+.coração:hover,
+.coração:focus{
+    transform:  scale(1.1);
+}
+
+.carrinho:hover{
+    transform:  scale(1.1);
+}
+

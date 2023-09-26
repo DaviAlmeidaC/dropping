@@ -1,0 +1,13 @@
+create database dropping;
+
+use dropping;
+
+create table produtos(
+id int primary key auto_increment,
+nome varchar(255),
+preco varchar(255)
+);
+
+select * from produtos;
+
+delete from produtos;

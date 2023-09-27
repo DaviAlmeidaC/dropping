@@ -193,6 +193,7 @@
     transform: scale(1.1);
 }
 
+
 @media screen and (max-width: 768px){
     .links_header{
         display: flex;

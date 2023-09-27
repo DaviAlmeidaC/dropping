@@ -5,7 +5,7 @@
     $result = mysqli_query($conn, $sql);
 
     if(!$result){
-        die("Erro na consulta: ".mysqli_error($conn));
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
     }
 ?>
 
@@ -66,6 +66,9 @@
 
 
 
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+
 
 </div>
 
@@ -121,18 +124,18 @@
 <div class="swiper-wrapper">
 
 <div class="swiper-slide">
-    <a href="venda.php"><img class="img-carrosel1" src="img/Frame 6.png" alt=""></a>
+    <a href="venda copy.php"><img class="img-carrosel1" src="img/Frame 6.png" alt=""></a>
     <div class="infos">
-    <a href="venda.php"><p class="titulo_anuncio">Fone de Ouvido Hazir</p></a>
+    <a href="venda copy.php"><p class="titulo_anuncio">Fone de Ouvido Hazir</p></a>
     <p class="avaliações"><img class="img_estrela" src="img/image 9.png" alt="">(1.432)</p>
     <p class="valor_antigo">R$ 478.99</p>
-    <p class="valor_pix"><b class="valor">R$ 236,99</b> no pix</p>
+    <p class="valor_pix"><b class="valor">R$ 156,99</b> no pix</p>
     </div>
 </div>
 <div class="swiper-slide">
-    <img class="img-carrosel1" src="img/Frame 7.png" alt="">
+<a href="venda.php"><img class="img-carrosel1" src="img/Frame 7.png" alt=""></a>
     <div class="infos">
-    <p class="titulo_anuncio">Fone de Ouvido Hazir</p>
+    <a href="venda.php"><p class="titulo_anuncio">Cadeira Gamer Skir</p></a>
     <p class="avaliações"><img class="img_estrela" src="img/image 9.png" alt="">(1.432)</p>
     <p class="valor_antigo">R$ 478.99</p>
     <p class="valor_pix"><b class="valor">R$ 236,99</b> no pix</p>
@@ -196,6 +199,8 @@
 
 
 
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 
 
 </div>
@@ -289,6 +294,8 @@
 
 
 
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 
 
 </div>

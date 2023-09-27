@@ -55,6 +55,7 @@
     font-weight: 400;
     font-size: 20px;
     margin-right: -25em;
+    transition: transform 0.2s;
 }
 
 .liks_baixo1{
@@ -62,13 +63,11 @@
     text-decoration: none;
     font-weight: 400;
     font-size: 20px;
-   
+    transition: transform 0.2s;
 }
 
 
-.blocos{
-    display: flex;
-}
+
 .nome_cadeira{
     font-size: 45px;
     font-weight: bold;
@@ -101,11 +100,6 @@
     max-width: 100%;
 }
 
-.imagens{
-    display: flex;
-    
-}
-
 .informacoes{
     
     border: rgb(172, 172, 172) 1px solid;
@@ -129,6 +123,11 @@ font-weight: bold;
 display: flex;
 align-items: center;
 
+}
+
+.img_relo{
+    width: 1vw;
+    margin-right: 0.1em;
 }
 
 .principal_avaliacoes{

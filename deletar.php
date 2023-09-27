@@ -10,6 +10,6 @@ if (isset($_GET['id']))
         header("Location: carrinho.php");
         exit();
     } else {
-        echo "Erro ao excluir o livro.";
+        echo "Erro ao excluir o o produto.";
     }
 ?>

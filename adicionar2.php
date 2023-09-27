@@ -5,8 +5,8 @@ if (mysqli_connect_errno()) {
     die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$nome = "Fone de Ouvido Hazir";
-$preco = 156.99;
+$nome = "Cadeira Gamer Skie 4D, 3 Almofadas, <br> Reclinavel, Branco e Preta";
+$preco = 236.99;
 
 $query = "INSERT INTO produtos (nome, preco) VALUES ('$nome', $preco)";
 if (mysqli_query($conexao, $query)) {

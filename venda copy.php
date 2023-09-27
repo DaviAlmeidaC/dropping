@@ -39,6 +39,7 @@
     <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
 
     <div class="div_principal">
+        
         <div class="fotos_pequenas">
             <a href=""><img class="fotos_cadeiras" src="img2/image 13.png" alt=""></a>
             <a href=""><img class="fotos_cadeiras" src="img2/image 14.png" alt=""></a>
@@ -47,11 +48,11 @@
         </div>    
 
         <div>
-        <img class="fotos" src="img2/image 131.png" alt="">
+        <img class="fotos" src="img/Frame 6.png" alt="">
         
         </div>
 
-
+        
         <div class="informacoes">
             <div class="tempo">
                 <h2 class="evento">Promoção de verão</h2>
@@ -73,13 +74,13 @@
                 <p class="loja">GB Games</p>
             </div>
 
-            <h1 class="nome_info">Cadeira Gamer Skie 4D, 3 Almofadas, <br> Reclinavel, Branco e Preta</h1>
+            <h1 class="nome_info">Fone de Ouvido Hazir</h1>
 
             <div class="dinheiro">
                 <img class="img_dinheiro" src="img2/dollar-sign.png" alt="">
                 <div>
                 <p class="preco_antigo"><b class="cortar">De: R$ 478,99</b> por: </p>
-                <p><b class="preco_novo"> R$ 236,99</b> no pix</p>
+                <p><b class="preco_novo"> R$ 156,99</b> no pix</p>
                 </div>
             </div>
 
@@ -96,7 +97,7 @@
             <a href=""><img class="tamanho_icons" src="img2/Vector.png" alt=""></a>
             </div>
 
-            <a class="botao_compra" href="adicionar2.php" >Comprar com desconto</a>
+            <a class="botao_compra" href="adicionar.php" >Comprar com desconto</a>
 
         </div>
 

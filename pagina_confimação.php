@@ -1,11 +1,11 @@
 <?php
     include "conexao.php";
 
-    $sql = "SELECT * FROM produtos";
-    $result = mysqli_query($conn, $sql);
+    $DRB_sql = "SELECT * FROM produtos";
+    $DRB_result = mysqli_query($DRB_conn, $DRB_sql);
 
-    if(!$result){
-        die("ocorreu um erro na consulta: ".mysqli_error($conn));
+    if(!$DRB_result){
+        die("ocorreu um erro na consulta: ".mysqli_error($DRB_conn));
     }
 ?>
 

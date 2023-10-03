@@ -7,11 +7,11 @@
 
 
     //Criar a conexão
-    $conn = new mysqli($host, $username, $password, $dbname); //Nesta ordem
+    $DRB_conn = new mysqli($host, $username, $password, $dbname); //Nesta ordem
 
     //Verificando se ocorreu algum erro na conexão
-    if($conn->connect_errno){
-        echo "Falha de Conexão: (".$conn->connect_errno.")";
+    if($DRB_conn->connect_errno){
+        echo "Falha de Conexão: (".$DRB_conn->DRB_connect_errno.")";
     }else{
         //echo "Conectado com Sucesso";
     }

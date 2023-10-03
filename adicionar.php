@@ -1,42 +1,38 @@
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "dropping");
+$DRB_conexao = mysqli_connect("localhost", "root", "", "dropping");
 
 if (mysqli_connect_errno()) {
     die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$nome = "Fone de Ouvido Hazir";
-$preco = 156.99;
+$DRB_nome = "Cadeira gamer";
+$DRB_preco = 100.99;
 
-$query = "INSERT INTO produtos (nome, preco) VALUES ('$nome', '$preco')";
-if (mysqli_query($conexao, $query)) {
+$DRB_query = "INSERT INTO produtos (nome, preco) VALUES ('$DRB_nome', '$DRB_preco')";
+if (mysqli_query($DRB_conexao, $DRB_query)) {
     echo "";
 } else {
-    echo "Erro ao inserir dados: " . mysqli_error($conexao);
+    echo "Erro ao inserir dados: " . mysqli_error($DRB_conexao);
 }
 
-$sql = "SELECT info FROM produtos";
-$result = $conexao->query($sql);
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $saldo_atual = $row["quantidade"];
+$DRB_sql = "SELECT quantidade FROM produtos";
+$DRB_result = $DRB_conexao->query($DRB_sql);
 
-    // Verificar se há saldo suficiente para a subtração
-    if ($saldo_atual >= 1) {
-        $novo_saldo = $saldo_atual - 1;
+    $DRB_row = $DRB_result->fetch_assoc();
+    $DRB_quantidade_atual = $DRB_row["quantidade"];
 
-        // Atualizar o saldo na tabela
-        $sql = "UPDATE info SET quantidade = $novo_saldo";
+    if ($DRB_quantidade_atual >= 1) {
+        $DRB_novo_saldo = $DRB_quantidade_atual - 1;
+
+        $DRB_sql = "UPDATE quantidade SET produtos = $DRB_novo_saldo";
        
     } else {
         echo "produtos acabados";
     }
-} else {
-    echo "Nenhum registro de produtos encontrado.";
-}
 
 
-mysqli_close($conexao);
+
+mysqli_close($DRB_conexao);
 ?>
 
 <!DOCTYPE html>
@@ -53,5 +49,6 @@ mysqli_close($conexao);
     <h1 class="titulo_principal">Item adicionado ao carrinho!</h1>
     <a class="link_direto" href="carrinho.php">ir para o carrinho</a>
     <a class="link_direto" href="index.php">ir para a tela principal</a>
+    <a class="link_direto" href="venda copy.php">ir para a tela principal</a>
 </body>
 </html>

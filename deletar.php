@@ -2,11 +2,11 @@
 if (isset($_GET['id']))
     include "conexao.php";
 
-    $id = $_GET['id'];
-    $sql = "DELETE FROM produtos WHERE id = $id";
-    $result = mysqli_query($conn, $sql);
+    $DRB_id = $_GET['id'];
+    $DRB_sql = "DELETE FROM produtos WHERE id = $DRB_id";
+    $DRB_result = mysqli_query($DRB_conn, $DRB_sql);
 
-    if ($result){
+    if ($DRB_result){
         header("Location: carrinho.php");
         exit();
     } else {

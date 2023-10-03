@@ -1,21 +1,42 @@
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "dropping");
+$DRB_conexao = mysqli_connect("localhost", "root", "", "dropping");
 
 if (mysqli_connect_errno()) {
     die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$nome = "Cadeira Gamer Skie 4D, 3 Almofadas, <br> Reclinavel, Branco e Preta";
-$preco = 236.99;
+$DRB_nome = "Fone de Ouvido Hazir";
+$DRB_preco = 156.99;
 
-$query = "INSERT INTO produtos (nome, preco) VALUES ('$nome', $preco)";
-if (mysqli_query($conexao, $query)) {
+$DRB_query = "INSERT INTO produtos (nome, preco) VALUES ('$DRB_nome', '$DRB_preco')";
+if (mysqli_query($DRB_conexao, $DRB_query)) {
     echo "";
 } else {
-    echo "Erro ao inserir dados padrão: " . mysqli_error($conexao);
+    echo "Erro ao inserir dados: " . mysqli_error($DRB_conexao);
 }
 
-mysqli_close($conexao);
+$DRB_sql = "SELECT quantidade FROM produtos";
+$DRB_result = $DRB_conexao->query($DRB_sql);
+
+    $DRB_row = $DRB_result->fetch_assoc();
+    $DRB_quantidade_atual = $DRB_row["quantidade"];
+
+    if ($DRB_quantidade_atual >= 1) {
+        $DRB_novo_saldo = $DRB_quantidade_atual - 1;
+
+        $DRB_sql = "UPDATE produtos SET quantidade = $DRB_novo_saldo";
+       
+    } else {
+        echo "produtos acabados";
+    }
+
+
+
+mysqli_close($DRB_conexao);
+?>
+
+
+mysqli_close($DRB_conexao);
 ?>
 
 <!DOCTYPE html>

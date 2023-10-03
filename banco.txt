@@ -5,9 +5,18 @@ use dropping;
 create table produtos(
 id int primary key auto_increment,
 nome varchar(255),
-preco varchar(255)
+preco varchar(255),
+quantidade varchar(255)
 );
+
+create table info (
+quantidade varchar(255)
+);
+
+insert into info (quantidade) values ('100');
 
 select * from produtos;
 
 delete from produtos;
+
+drop table produtos;

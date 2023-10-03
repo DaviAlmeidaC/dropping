@@ -1,4 +1,14 @@
+<?php
+    include "conexao.php";
 
+    $sql = "SELECT * FROM produtos";
+    $sql2 = "SELECT * FROM info";
+    $result = mysqli_query($conn, $sql, $sql2);
+
+    if(!$result){
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +46,10 @@
         <a class="liks_baixo1" href="">Redes sociais</a>
     </div>
 
-    <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
+    <h1 class="nome_cadeira">Fone de Ouvido Hazir</h1>
 
     <div class="div_principal">
-        
+    <div class="imagens">
         <div class="fotos_pequenas">
             <a href=""><img class="fotos_cadeiras" src="img2/image 13.png" alt=""></a>
             <a href=""><img class="fotos_cadeiras" src="img2/image 14.png" alt=""></a>
@@ -51,8 +61,8 @@
         <img class="fotos" src="img/Frame 6.png" alt="">
         
         </div>
-
-        
+    </div>
+    <?php  ($row = mysqli_fetch_assoc($result)) ?>
         <div class="informacoes">
             <div class="tempo">
                 <h2 class="evento">Promoção de verão</h2>
@@ -65,7 +75,7 @@
                     <p class="vender">Vendas: <b class="vendas">1345</b></p>
                 </div>
                 <div class="estoque">
-                    <p class="">Estoque:</p>
+                    <p class="">Estoque:<?php echo $row['quantidade'];?></p>
                 </div>
             </div>
 
@@ -103,6 +113,7 @@
 
 
     </div>
+    
 
     <div class="descricao">
         <h1 class="h1_descricao">Descrição</h1>  

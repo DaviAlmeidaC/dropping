@@ -79,6 +79,10 @@
     justify-content: center;
 }
 
+.imagens{
+    display: flex;
+}
+
 .fotos_pequenas{
     display: flex;
     flex-direction: column;

@@ -8,12 +8,33 @@ if (mysqli_connect_errno()) {
 $nome = "Fone de Ouvido Hazir";
 $preco = 156.99;
 
-$query = "INSERT INTO produtos (nome, preco) VALUES ('$nome', $preco)";
+$query = "INSERT INTO produtos (nome, preco) VALUES ('$nome', '$preco')";
 if (mysqli_query($conexao, $query)) {
     echo "";
 } else {
-    echo "Erro ao inserir dados padrão: " . mysqli_error($conexao);
+    echo "Erro ao inserir dados: " . mysqli_error($conexao);
 }
+
+$sql = "SELECT info FROM produtos";
+$result = $conexao->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $saldo_atual = $row["quantidade"];
+
+    // Verificar se há saldo suficiente para a subtração
+    if ($saldo_atual >= 1) {
+        $novo_saldo = $saldo_atual - 1;
+
+        // Atualizar o saldo na tabela
+        $sql = "UPDATE info SET quantidade = $novo_saldo";
+       
+    } else {
+        echo "produtos acabados";
+    }
+} else {
+    echo "Nenhum registro de produtos encontrado.";
+}
+
 
 mysqli_close($conexao);
 ?>

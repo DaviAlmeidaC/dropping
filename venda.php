@@ -1,4 +1,13 @@
+<?php
+    include "conexao.php";
 
+    $sql = "SELECT * FROM produtos";
+    $result = mysqli_query($conn, $sql);
+
+    if(!$result){
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,22 +44,23 @@
         <a class="liks_baixo" href="">Comprar novamente</a>
         <a class="liks_baixo1" href="">Redes sociais</a>
     </div>
-
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
     <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
 
     <div class="div_principal">
-        <div class="fotos_pequenas">
-            <a href=""><img class="fotos_cadeiras" src="img2/image 13.png" alt=""></a>
-            <a href=""><img class="fotos_cadeiras" src="img2/image 14.png" alt=""></a>
-            <a href=""><img class="fotos_cadeiras" src="img2/image 16.png" alt=""></a>
-            <a href=""><img class="fotos_cadeiras" src="img2/image 17.png" alt=""></a>
-        </div>    
+        <div class="imagens">
+            <div class="fotos_pequenas">
+                <a href=""><img class="fotos_cadeiras" src="img2/image 13.png" alt=""></a>
+                <a href=""><img class="fotos_cadeiras" src="img2/image 14.png" alt=""></a>
+                <a href=""><img class="fotos_cadeiras" src="img2/image 16.png" alt=""></a>
+                <a href=""><img class="fotos_cadeiras" src="img2/image 17.png" alt=""></a>
+            </div>    
 
-        <div>
-        <img class="fotos" src="img2/image 131.png" alt="">
-        
+            <div>
+            <img class="fotos" src="img2/image 131.png" alt="">
+            
+            </div>
         </div>
-
 
         <div class="informacoes">
             <div class="tempo">
@@ -64,7 +74,7 @@
                     <p class="vender">Vendas: <b class="vendas">1345</b></p>
                 </div>
                 <div class="estoque">
-                    <p class="">Estoque:</p>
+                    <p class="">Estoque:<?php echo $row['quantidade'];?></p>
                 </div>
             </div>
 
@@ -108,7 +118,7 @@
         <p class="p_descricao">cadeira gamer é construída com um design ergonomicamente pensado. Ela é projetada para fornecer suporte adequado para a coluna vertebral e a postura, reduzindo a fadiga durante horas de jogo. Possui curvas e contornos que se encaixam no corpo do jogador.</p>
     </div>
 
-
+    <?php endwhile; ?>
 
     <section class="carrossel">
     <p class="carrosel__titulo2">Produtos parecidos</p>

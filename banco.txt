@@ -13,7 +13,7 @@ create table info (
 quantidade varchar(255)
 );
 
-insert into produtos (quantidade) values ('100');
+insert into info (quantidade) values ('100');
 
 select * from produtos;
 

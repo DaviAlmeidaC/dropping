@@ -1,15 +1,13 @@
 <?php
     include "conexao.php";
 
-    $DRB_sql = "SELECT * FROM produtos";
+    $sql = "SELECT * FROM produtos";
+    $sql2 = "SELECT * FROM info";
+    $result = mysqli_query($conn, $sql, $sql2);
 
-    $DRB_result = mysqli_query($DRB_conn, $DRB_sql);
-
-
-    if(!$DRB_result){
-        die("ocorreu um erro na consulta: ".mysqli_error($DRB_conn));
+    if(!$result){
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +62,7 @@
         
         </div>
     </div>
-    <?php  ($DRB_row = mysqli_fetch_assoc($DRB_result)) ?>
+    <?php  ($row = mysqli_fetch_assoc($result)) ?>
         <div class="informacoes">
             <div class="tempo">
                 <h2 class="evento">Promoção de verão</h2>
@@ -77,7 +75,7 @@
                     <p class="vender">Vendas: <b class="vendas">1345</b></p>
                 </div>
                 <div class="estoque">
-                    <p class="">Estoque:<?php echo $DRB_row['quantidade'];?></p>
+                    <p class="">Estoque:<?php echo $row['quantidade'];?></p>
                 </div>
             </div>
 

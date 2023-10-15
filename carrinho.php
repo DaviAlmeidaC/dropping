@@ -1,11 +1,11 @@
 <?php
     include "conexao.php";
 
-    $DRB_sql = "SELECT * FROM produtos";
-    $DRB_result = mysqli_query($DRB_conn, $DRB_sql);
+    $sql = "SELECT * FROM produtos";
+    $result = mysqli_query($conn, $sql);
 
-    if(!$DRB_result){
-        die("ocorreu um erro na consulta: ".mysqli_error($DRB_conn));
+    if(!$result){
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
     }
 ?>
 
@@ -43,21 +43,21 @@
 
     <h1 class="title">Carrinho</h1>
 
-    <?php while ($DRB_row = mysqli_fetch_assoc($DRB_result)): ?>
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
     <div class="blocos" >
         <div class="img_div">
             <img class="img" src="img2/image 13 (1).png" alt="">
         </div>
 
-        <div class="infos" <?php $DRB_row = mysqli_fetch_assoc($DRB_result) ?>>
+        <div class="infos" <?php $row = mysqli_fetch_assoc($result) ?>>
             <div class="trash">
-            <a href="deletar.php?id=<?php echo $DRB_row["id"]?>"><img  src="img2/trash-2.png" alt=""></a>
+            <a href="deletar.php?id=<?php echo $row["id"]?>"><img  src="img2/trash-2.png" alt=""></a>
             </div>
-        <h1 class="nome_info"><?php echo $DRB_row['nome'];?></h1>
+        <h1 class="nome_info"><?php echo $row['nome'];?></h1>
         <div class="dinheiro">
                 
                 <div>
-                <p><b class="preco_novo"> <?php echo $DRB_row['preco']; ?> </b> no pix</p>
+                <p><b class="preco_novo"> <?php echo $row['preco']; ?> </b> no pix</p>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
                 </div>
             <div class="acrescimo">
                 <button class="acrescimo-sinal"><p >-</p></button>
-                <p class=quantidade><?php echo $DRB_row['quantidade'];?></p>
+                <section class=quantidade></section>
                 <button class="acrescimo-sinal"><p >+</p></button>
             </div>
             </div>

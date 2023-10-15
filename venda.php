@@ -1,11 +1,11 @@
 <?php
     include "conexao.php";
 
-    $DRB_sql = "SELECT * FROM produtos";
-    $DRB_result = mysqli_query($DRB_conn, $DRB_sql);
+    $sql = "SELECT * FROM produtos";
+    $result = mysqli_query($conn, $sql);
 
-    if(!$DRB_result){
-        die("ocorreu um erro na consulta: ".mysqli_error($DRB_conn));
+    if(!$result){
+        die("ocorreu um erro na consulta: ".mysqli_error($conn));
     }
 ?>
 
@@ -44,7 +44,7 @@
         <a class="liks_baixo" href="">Comprar novamente</a>
         <a class="liks_baixo1" href="">Redes sociais</a>
     </div>
-    <?php  $DRB_row = mysqli_fetch_assoc($DRB_result) ?>
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
     <h1 class="nome_cadeira">Cadeira Gamer Skir</h1>
 
     <div class="div_principal">
@@ -74,7 +74,7 @@
                     <p class="vender">Vendas: <b class="vendas">1345</b></p>
                 </div>
                 <div class="estoque">
-                    <p class="">Estoque:<?php echo $DRB_row['quantidade'];?></p>
+                    <p class="">Estoque:<?php echo $row['quantidade'];?></p>
                 </div>
             </div>
 
@@ -118,7 +118,7 @@
         <p class="p_descricao">cadeira gamer é construída com um design ergonomicamente pensado. Ela é projetada para fornecer suporte adequado para a coluna vertebral e a postura, reduzindo a fadiga durante horas de jogo. Possui curvas e contornos que se encaixam no corpo do jogador.</p>
     </div>
 
-    <?php ?>
+    <?php endwhile; ?>
 
     <section class="carrossel">
     <p class="carrosel__titulo2">Produtos parecidos</p>
